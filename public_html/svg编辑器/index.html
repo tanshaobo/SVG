@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>svg编辑器</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class='main'>
+      <div id='toolbar'>
+        <h2>创建</h2>
+        <form id='create-shape'>
+          <button type='button' create='rect'>Rect</button>
+          <button type='button' create='circle'>Circle</button>
+          <button type='button' create='ellipse'>Ellipse</button>
+          <button type='button' create='line'>Line</button>
+        </form>
+        <h2>形状</h2>
+        <form id='shape-attrs'>
+          请先创建图形
+        </form>
+        <h2>外观和变换</h2>
+        <form id='look-and-transform' disabled='true'>
+          <p>
+            <label>填充</label>
+            <input id='fill' type='color' value='#FFFFFF'>
+          </p>
+          <p>
+            <label>描边</label>
+            <input id='stroke'type='color' value='#FF0000'>
+            <input id='strokeWidth' type='range' value='1'>
+          </p>
+          <p>
+            <label>TranslateX</label>
+            <input id='translateX' type='range' min='-400' max='400' value='0'>
+          </p>
+          <p>
+            <label>TranslateY</label>
+            <input id='translateY' type='range' min='-400' max='400' value='0'>
+          </p>
+          <p>
+            <label>Rotate</label>
+            <input id='rotate' type='range' min='-180' max='180' value='0'>
+          </p>
+          <p>
+            <label>Scale</label>
+            <input id='scale' type='range' min='-1' max='2' step='0.01' value='1'>
+          </p>
+        </form>
+      </div>
+      <div id='canvas'></div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>svg初体验</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div>
+      <svg xmlns='http://www.w3.org/2000/svg'width='600'height='300'>
+      <rect x='20' y='20' rx='5' ry='5' width='200' height='100'stroke='red' fill='#FF0'transform='translate(-10,0)'>
+      </rect>
+      <circle cx='300' cy='70' r='50' stroke='red' fill='yellow'></circle>
+      <ellipse cx='500'cy='70'rx='80'ry='50'stroke='red' fill='yellow'>
+      </ellipse>
+      <line x1='20'y1='140'x2='120'y2='240'stroke='red'fill='yellow'></line>
+      <polyline points='120 140 360 260 130 240'stroke='red' fill='yellow'></polyline>
+      <polygon points='370 120 490 180 360 260'stroke='red'fill='yellow'></polygon>
+      </svg>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
