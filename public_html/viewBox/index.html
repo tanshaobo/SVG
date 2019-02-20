@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>viewBox演示</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1>ViewBox演示</h1>
+    <form id="form">
+      <fieldset>
+        <legend>ViewBox</legend>
+        <label>x:<input id="vx" type="number" value="0"></label>
+        <label>y:<input id="vy" type="number" value="0"></label>
+        <label>width:<input id="vw" type="number" value="300"></label>
+        <label>height:<input id="vh" type="number" value="200"></label>
+      </fieldset>
+      <fieldset>
+        <legend>preserveAspectRatio</legend>
+        <label>
+          align:<select id="align">
+            <option value="none">none</option>
+            <option value="xMinYMin">XminYmin</option>
+            <option value="xMidYMin">xMidYMin</option>
+            <option value="xMaxYMin">xMaxYMin</option>
+            <option value="xMinYMid">xMinYMid</option>
+            <option value="xMidYMid">xMidYMid</option>
+            <option value="xMaxYMid">xMaxYMid</option>
+            <option value="xMinYMax">xMinYMax</option>
+            <option value="xMidYMax">xMidYMax</option>
+            <option value="xMaxYMax">xMaxYMax</option>
+          </select>
+        </label>
+        <label>
+          meetOrSlice:<select id="meetOrSlice">
+            <option value="meet">meet</option>
+            <option value="slice">slice</option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg">
+    <!--FACE-->
+    <circle cx="100" cy="100" r="90" fill="#39F"></circle>
+    <!--EYES-->
+    <circle cx="70" cy="80" r="20" fill="#FFF"></circle>
+    <circle cx="130" cy="80" r="20" fill="#FFF"></circle>
+    <circle cx="65" cy="75" r="10" fill="#000"></circle>
+    <circle cx="125" cy="75" r="10" fill="#000"></circle>
+    <path d="M 50 140 A 60 60 0 0 0 150 140" stroke="#FFF" stroke-width="3" fill="none" />
+    <rect id="viewBoxIndicator" stroke="#F00" stroke-width="3.5" fill="none"/>
+    </svg>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
