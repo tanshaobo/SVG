@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>svg初体验</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <fieldset>
+      <legend>设置</legend>
+      <label>
+        分组：<select id="group">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+        </select>
+      </label>
+      <label>
+        变换：
+        <input id="tc" type="text"/>
+        <span id="ts"></span>
+      </label>
+    </fieldset>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="-200.5 -100.5 1000 600">
+      <defs>
+        <g id="coord">
+          <line x1="0" y1="0" x2="300" y2="0"/>
+          <line x1="0" y1="0" x2="0" y2="300"/>
+          <circle cx="0" cy="0" r="2"/>
+          <circle cx="100" cy="0" r="2"/>
+          <circle cx="200" cy="0" r="2"/>
+          <circle cx="0" cy="100" r="2"/>
+          <circle cx="0" cy="200" r="2"/>
+        </g>
+      </defs>
+      <use xlink:href="#coord" stroke="#000" fill="#000" />
+      <text fill="block" x="5" y="20">world</text>
+      <g id="a" stroke="#f00" fill="#f00">
+        <use xlink:href="#coord"/>
+        <text x="5" y="20">a</text>
+        <g id="b" stroke="#00f" fill="#00f">
+          <use xlink:href="#coord"/>
+          <text x="5" y="20">b</text>
+          <g id="c" stroke="#0f0" fill="#0f0">
+            <use xlink:href="#coord"/>
+            <text x="5" y="20">c</text>
+          </g>
+        </g>
+        <g id="d" stroke="#ff0" fill="#ff0">
+          <use xlink:href="#coord"/>
+          <text x="5" y="20">d</text>
+        </g>
+      </g>
+    </svg>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
