@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>颜色渐变</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <svg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'>
+    <!--线性渐变-->
+    <!--gradientUnits="objectBoundingBox",此处设置是以当前盒子的左上、右下坐标为基准，来描述当前渐变-->
+    <defs>
+    <lineargradient id="grad1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F00"/>
+    <stop offset="0.5" stop-color="#0F0"/>
+    <stop offset="1" stop-color="#00F"/>
+    </linearGradient>  
+    </defs>
+    <defs>
+    <!--gradientUnits="userSpaceOnUse" 此处设置是以svg世界为基准，与当前盒子无关-->
+    <lineargradient id="grad2" gradientUnits="userSpaceOnUse" x1="210" y1="0" x2="410" y2="150">
+    <stop offset="0" stop-color="#F00"/>
+    <stop offset="0.5" stop-color="#0F0"/>
+    <stop offset="1" stop-color="#00F"/>
+    </linearGradient>  
+    </defs>
+    <!--径向渐变-->
+    <!--offset 阀值-->
+    <defs>
+    <radialgradient id="grad3" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5" r="1" fx="0.5" fy="0.5">
+    <stop offset="0" stop-color="#FFF"></stop>
+    <stop offset="0.1" stop-color="#FF0"></stop>
+    <stop offset="0.2" stop-color="#0FF"></stop>
+    <stop offset="0.3" stop-color="#F0F"></stop>
+    <stop offset="0.4" stop-color="#00F"></stop>
+    <stop offset="0.5" stop-color="#0F0"></stop>
+    <stop offset="0.6" stop-color="#F00"></stop>
+    <stop offset="0.7" stop-color="#000"></stop>
+    <stop offset="0.8" stop-color="#FFF"></stop>
+    <stop offset="0.9" stop-color="#000"></stop>
+    <stop offset="1" stop-color="#FFF"></stop>
+    </radialgradient>
+    </defs>
+    <!--笔刷-->
+    <defs>
+  <pattern id="grad4" x="0" y="0" width="0.2" height="0.2">
+    <circle cx="10" cy="10" r="5" fill="#F00"/>
+    <polygon points="30 10 60 50 0 50" fill="#0F0"></polygon>
+  </pattern>
+  </defs>
+  <defs>
+  <pattern id="grad5" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="5" fill="#F00"/>
+    <polygon points="30 10 60 50 0 50" fill="#0F0"></polygon>
+  </pattern>
+  </defs>
+  <defs>
+  <!--此处patternUnits与patternContentUnits取值渲染存在为题-->
+  <pattern id="grad6" x="0" y="0" width="0.25" height="0.25" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox">
+    <circle cx="0.1" cy="0.1" r="0.1" fill="#F00"/>
+    <polygon points="30 10 60 50 0 50" fill="#0F0"></polygon>
+  </pattern>
+  </defs>
+
+
+  <rect x="0" y="0" fill="url(#grad1)" width="200" height="150"/>
+  <rect x="210" y="0" fill="url(#grad2)" width="200" height="150"/>
+  <rect x="420" y="0" fill="url(#grad3)" width="200" height="150"/>
+  <circle cx="100" cy="300" r="75" fill="url(#grad3)"/>
+  <ellipse fill="url(#grad3)" cx="720" cy="75" rx="100" ry="75"/>
+  <rect x="200" y="200" fill="url(#grad4)" width="200" height="200"/>
+  <rect x="420" y="200" fill="url(#grad4)" width="300" height="200"/>
+  <rect x="0" y="400" fill="url(#grad5)" width="200" height="200"/>
+  <rect x="210" y="400" fill="url(#grad6)" width="200" height="200"/>
+  </svg>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
