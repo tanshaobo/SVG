@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>path</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div>
+      <p>命令 大写绝对位置，小写相对位置<br>
+      参数 本命令参数完毕后，继续加参数则执行当前命令<br>
+      M(x,y)+  移动画笔至 move to<br>
+      L(x,y)+  画直线到   line to<br>
+      H(x)+   绘制横线到  horizontal to<br>
+      V(y)+   绘制竖线到 vertical to<br>
+      </p>
+      <svg xmlns='http://www.w3.org/2000/svg'width='1000'height='800'>
+      <path d="M 0 0 L 200 100 200 300 l 50 50"/>
+      </svg>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
